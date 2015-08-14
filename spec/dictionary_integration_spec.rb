@@ -33,4 +33,17 @@ describe('dictionary test path', {:type => :feature}) do
    expect(page).to have_content('A cat that likes tacos.')
  end
 
+ it('allows the user to add definitions from the word_detail.erb view and see them added to previous definitions.') do
+   visit('/')
+   fill_in('word', :with => 'Tacocat')
+   select('Noun', :from => 'type')
+   fill_in('definition_text', :with => 'A cat that likes tacos.')
+   click_button('Add Word')
+   select('Verb', :from => 'type')
+   fill_in('definition_text', :with => 'To meow while eating tacos.')
+   click_button('Add Definition')
+   expect(page).to have_content('A cat that likes tacos.')
+   expect(page).to have_content('To meow while eating tacos.')
+ end
+
 end
