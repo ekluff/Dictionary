@@ -20,5 +20,5 @@ post('/add_word') do
 
   @words = Word.all
 
-  erb(:index)
+  erb(:word_detail)
 end
