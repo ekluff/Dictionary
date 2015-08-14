@@ -92,6 +92,15 @@ describe('Definition') do
     end
   end
 
+  describe('.find_definition') do
+    it('returns a definitoin object based on attribute "id"') do
+      Definition.new({:word => 'tacocat', :type => 'noun', :definition_text => 'A cat that likes tacos.'})
+      Definition.new({:word => 'burritodog', :type => 'noun', :definition_text => 'A dog that likes burritos.'})
+      Definition.new({:word => 'empanadafish', :type => 'noun', :definition_text => 'A fish that likes empanadas.'})
+    expect(Definition.find_definition(1).word).to(eq('burritodog'))
+    end
+  end
+
 
 
 
