@@ -5,11 +5,9 @@
     <%= definition.definition_text %>
   <% end %>
 
-  <form id="add_definition" action="/add_definition" method="post">
+  <form id="add_definition" action="/add_definition/<%= @word %>" method="post">
 
-  <h4>Add a word:</h4>
-
-  <input type="text" class="word_input_field" name="word" placeholder="Word">
+  <h4>Add a definition for this word:</h4>
 
   <select class="word_type_input_field" name="type">
     <option value="nil">Please select word type.</option>
@@ -22,6 +20,6 @@
   <textarea class="definition_text_input_field" rows="10" cols="50" name="definition_text" form="add_word" placeholder="Definition text">
   </textarea>
 
-  <button name="button" class="new_word_button" type="submit">Add Word</button>
+  <button name="button" class="new_word_button" type="submit">Add Definition</button>
 
 </form>
