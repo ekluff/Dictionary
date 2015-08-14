@@ -17,8 +17,8 @@ describe('Word') do
 
   describe('.all') do
     it('returns Word@@words') do
-      test_word_1 = Word.new({:word => 'tacocat'})
-      test_word_2 = Word.new({:word => 'burritodog'})
+      Word.new({:word => 'tacocat'})
+      Word.new({:word => 'burritodog'})
       expect(Word.all[0].word).to(eq('tacocat'))
       expect(Word.all[1].word).to(eq('burritodog'))
     end
@@ -38,9 +38,9 @@ describe('Word') do
 
   describe('.find_word') do
     it('returns a word object based on attribute "word"') do
-      test_word_1 = Word.new({:word => 'tacocat'})
-      test_word_2 = Word.new({:word => 'burritodog'})
-      test_word_3 = Word.new({:word => 'empanadafish'})
+      Word.new({:word => 'tacocat'})
+      Word.new({:word => 'burritodog'})
+      Word.new({:word => 'empanadafish'})
       expect(Word.find_word('burritodog').word).to(eq('burritodog'))
     end
   end
