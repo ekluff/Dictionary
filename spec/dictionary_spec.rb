@@ -17,6 +17,7 @@ describe('Word') do
       expect(test_word.creation_time.class).to(eq(Time))
       expect(test_word.include_in_dictionary).to(eq(true))
       expect(test_word.definitions).to(eq([]))
+      expect(Word.all[0].word).to(eq('tacocat'))
     end
   end
 
