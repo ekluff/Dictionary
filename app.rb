@@ -44,3 +44,18 @@ get('/word_detail/:word') do
 
   erb(:word_detail)
 end
+
+get('/search') do
+  search_word = params.fetch('search_word')
+  found_word = Word.find_word(search_word)
+
+  if found_word == nil
+    @word = nil
+  else
+    @word = found_word.word
+    @all_word_definitions = found_word.definitions
+  end
+
+  # binding.pry
+  erb(:word_detail)
+end
