@@ -15,6 +15,15 @@ describe('Word') do
     end
   end
 
+  describe('.all') do
+    it('returns Word@@words') do
+      test_word_1 = Word.new({:word => 'tacocat'})
+      test_word_2 = Word.new({:word => 'burritodog'})
+      expect(Word.all[0].word).to(eq('tacocat'))
+      expect(Word.all[1].word).to(eq('burritodog'))    
+    end
+  end
+
   describe('#initialize') do
     it('creates a new instance of class Word that accepts user input word, assigns ID, saves a creation time, sets include_in_dictionary to true, and creates nested empty array @definitions.') do
       test_word = Word.new({:word => 'tacocat'})
@@ -26,6 +35,7 @@ describe('Word') do
       expect(Word.all[0].word).to(eq('tacocat'))
     end
   end
+
 
 
 
