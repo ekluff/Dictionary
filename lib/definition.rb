@@ -3,7 +3,7 @@ class Definition
   @@definitions = []
   @@counter = 0
 
-  attr_reader(:word, :type, :definition, :id, :creation_time, :include_in_dictionary)
+  attr_reader(:word, :type, :definition_text, :id, :creation_time, :include_in_dictionary)
   attr_writer(:include_in_dictionary)
 
   # instance methods
@@ -11,7 +11,7 @@ class Definition
   define_method(:initialize) do |attributes|
     @word = attributes.fetch(:word)
     @type = attributes.fetch(:type)
-    @definition = attributes.fetch(:definition)
+    @definition_text = attributes.fetch(:definition_text)
     @id = @@counter
     @creation_time = Time.now
     @include_in_dictionary = true
@@ -19,7 +19,26 @@ class Definition
     @@definitions.push(self)
   end
 
+  # class methods
 
+  define_singleton_method(:clear) do
+    @@definitions = []
+    @@counter = 0
+  end
+
+  define_singleton_method(:all) do
+    @@definitions
+  end
+
+  define_singleton_method(:find_definition) do |definition_id_sought|
+    found_definition = nil
+    @@definitions.each do |definition_searched|
+      if definition_searched.id == definition_id_sought
+        found_definition = definition_searched
+      end
+    end
+    found_definition
+  end
 
 
 
