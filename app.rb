@@ -56,6 +56,5 @@ get('/search') do
     @all_word_definitions = found_word.definitions
   end
 
-  # binding.pry
   erb(:word_detail)
 end
