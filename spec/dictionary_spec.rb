@@ -45,6 +45,15 @@ describe('Word') do
     end
   end
 
+  describe('#include_in_dictionary') do
+    it('sets the value of word attribute "include_in_dictionary" to true or false') do
+      Word.new({:word => 'tacocat'})
+      test_word = Word.find_word('tacocat')
+      test_word.include_in_dictionary(false)
+      expect(test_word.exclude_from_dictionary).to(eq(false))
+    end
+  end
+
 
 
 
