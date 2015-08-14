@@ -15,7 +15,9 @@ post('/add_word') do
   type = params.fetch('type')
   definition_text = params.fetch('definition_text')
 
-  Word.new({:word => @word})
+  if Word.find_word(@word) == nil
+    Word.new({:word => @word})
+  end
   Definition.new({:word => @word, :type => type, :definition_text => definition_text})
 
   @all_word_definitions = Word.find_word(@word).definitions
