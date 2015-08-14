@@ -40,7 +40,4 @@ class Definition
     found_definition
   end
 
-
-
-
 end
