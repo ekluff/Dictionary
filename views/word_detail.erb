@@ -1,9 +1,11 @@
 <h3><%= @word %></h3>
-<h4><%= @type %></h4>
-<%= @definition_text %>
 
+  <% @all_word_definitions.each() do |definition| %>
+    <h4><%= definition.type %></h4>
+    <%= definition.definition_text %>
+  <% end %>
 
-<form id="add_definition" action="/add_definition" method="post">
+  <form id="add_definition" action="/add_definition" method="post">
 
   <h4>Add a word:</h4>
 
@@ -18,10 +20,8 @@
   </select>
 
   <textarea class="definition_text_input_field" rows="10" cols="50" name="definition_text" form="add_word" placeholder="Definition text">
-</textarea>
+  </textarea>
 
   <button name="button" class="new_word_button" type="submit">Add Word</button>
-
-
 
 </form>
