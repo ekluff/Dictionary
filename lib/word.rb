@@ -4,6 +4,7 @@ class Word
   @@counter = 0
 
   attr_reader(:word, :id, :creation_time, :include_in_dictionary, :definitions)
+  attr_writer(:include_in_dictionary)
 
   # instance methods
 
