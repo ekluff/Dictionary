@@ -22,3 +22,11 @@ post('/add_word') do
 
   erb(:word_detail)
 end
+
+get('/word_detail/:word') do
+  @word = params.fetch('word')
+
+  @all_word_definitions = Word.find_word(@word).definitions
+  
+  erb(:word_detail)
+end
