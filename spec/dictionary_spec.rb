@@ -58,8 +58,14 @@ end
 
 describe('Definition') do
 
+  before() do
+    Word.clear
+    Definition.clear
+  end
+
   describe('.clear') do
     it('is empty at first') do
+      expect(Word.all).to(eq([]))
       expect(Definition.all).to(eq([]))
     end
   end
