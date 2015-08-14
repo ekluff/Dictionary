@@ -14,6 +14,7 @@ class Word
     @include_in_dictionary = true
     @definitions = []
     @@counter += 1
+    @@words.push(self)
   end
 
   # class methods
