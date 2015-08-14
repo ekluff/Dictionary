@@ -1,0 +1,18 @@
+<form id="add_word" action="/add_word/:word" method="post">
+
+  <h4>Add a word:</h4>
+
+  <input type="text" name="word" placeholder="Word">
+
+  <select name="type">
+    <option value="nil">Please select word type.</option>
+    <option value="noun">Noun</option>
+    <option value="verb">Verb</option>
+    <option value="adjective">Adjective</option>
+    <option value="adverb">Adverb</option>
+  </select>
+
+  <textarea rows="10" cols="50" name="definition_text" form="add_word" placeholder="Definition text">
+</textarea>
+
+</form>
