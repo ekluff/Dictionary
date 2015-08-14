@@ -70,6 +70,19 @@ describe('Definition') do
     end
   end
 
+  describe('#initialize') do
+    it('creates a new definition including word, definition text, type, id, creation time, and include in dictionary status.') do
+      test_definition = Definition.new({:word => 'tacocat', :type => 'noun', :definition_text => 'A cat that likes tacos.'})
+      expect(test_definition.word).to(eq('tacocat'))
+      expect(test_definition.type).to(eq('noun'))
+      expect(test_definition.definition_text).to(eq('A cat that likes tacos.'))
+      expect(test_definition.id).to(eq(0))
+      expect(test_definition.creation_time.class).to(eq(Time))
+      expect(test_definition.include_in_dictionary).to(eq(true))
+      expect(Definition.all[0].word).to(eq('tacocat'))
+    end
+  end
+
 
 
 
