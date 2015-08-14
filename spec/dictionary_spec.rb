@@ -9,6 +9,12 @@ describe('Word') do
     Word.clear
   end
 
+  describe('.clear') do
+    it('is empty at first') do
+      expect(Word.all).to(eq([]))
+    end
+  end
+
   describe('#initialize') do
     it('creates a new instance of class Word that accepts user input word, assigns ID, saves a creation time, sets include_in_dictionary to true, and creates nested empty array @definitions.') do
       test_word = Word.new({:word => 'tacocat'})
