@@ -18,6 +18,10 @@ class Word
     @@words.push(self)
   end
 
+  define_method(:add_definition) do |new_definition|
+    @definitions.push(new_definition)
+  end
+
   # class methods
 
   define_singleton_method(:clear) do

@@ -54,6 +54,15 @@ describe('Word') do
     end
   end
 
+  describe('#add_definition') do
+    it('creates a new definition object and pushes it into the definition array in a word object.') do
+      test_word = Word.new({:word => 'tacocat'})
+      test_definition = Definition.new({:word => 'tacocat', :type => 'noun', :definition_text => 'A cat that likes tacos.'})
+      test_word.add_definition(test_definition)
+      expect(test_word.definitions[0].definition_text).to(eq('A cat that likes tacos.'))
+    end
+  end
+
 end
 
 describe('Definition') do
