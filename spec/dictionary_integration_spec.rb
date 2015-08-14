@@ -22,4 +22,15 @@ describe('dictionary test path', {:type => :feature}) do
    expect(page).to have_content('A cat that likes tacos.')
  end
 
+ it('allows a user to click on a word on the homepage and view the details of that word') do
+   visit('/')
+   fill_in('word', :with => 'Tacocat')
+   select('Noun', :from => 'type')
+   fill_in('definition_text', :with => 'A cat that likes tacos.')
+   click_button('Add Word')
+   visit('/')
+   click_link('Tacocat')
+   expect(page).to have_content('A cat that likes tacos.')
+ end
+
 end
