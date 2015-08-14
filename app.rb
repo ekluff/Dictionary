@@ -18,7 +18,7 @@ post('/add_word') do
   Word.new({:word => @word})
   Definition.new({:word => @word, :type => @type, :definition_text => @definition_text})
 
-  @words = Word.all
+  @all_word_definitions = Word.find_word(@word).definitions
 
   erb(:word_detail)
 end
