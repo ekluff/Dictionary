@@ -5,6 +5,10 @@ require('./lib/word')
 also_reload('lib/**/*.rb')
 require('pry')
 
+before do
+  cache_control :public, :must_revalidate
+end
+
 get('/') do
   @words = Word.all
   erb(:index)
