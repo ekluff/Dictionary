@@ -1,6 +1,70 @@
 .headline {
-    margin: auto;
-    width: 60%;
-    padding: 10px;
-    text-align: center;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+.nav {
+  float: left;
+  border-right: 1px solid black;
+  height: 100%;
+  width: 25%;
+  position: absolute;
+  padding: 50px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  padding: 0.5em;
+  font-size: 1.2em;
+  list-style: none;
+}
+
+.content-container {
+  position: absolute;
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  width: 75%;
+  float: right;
+  text-align: center;
+}
+
+.content ul {
+  padding: 50px;
+}
+
+.content li {
+  list-style: none;
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+
+.field {
+  margin-right: 5%;
+  margin-left: 10%;
+}
+
+.option {
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
+.area {
+  width: 50%;
+  margin: 20px;
+}
+
+.word_button {
+  display: block;
+  margin: auto;
 }
