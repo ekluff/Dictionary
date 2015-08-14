@@ -55,3 +55,18 @@ describe('Word') do
   end
 
 end
+
+describe('Definition') do
+
+  describe('.clear') do
+    it('is empty at first') do
+      expect(Definition.all).to(eq([]))
+    end
+  end
+
+
+
+
+
+
+end
