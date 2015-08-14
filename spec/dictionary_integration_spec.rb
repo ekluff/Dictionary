@@ -16,7 +16,7 @@ describe('dictionary test path', {:type => :feature}) do
  it('serves the index page which will ask the user to input a word and definition') do
    visit('/')
    fill_in('word', :with => 'Tacocat')
-   select('noun', :from => 'type')
+   select('Noun', :from => 'type')
    fill_in('definition_text', :with => 'A cat that likes tacos.')
    click_button('Add Word')
    expect(page).to have_content('A cat that likes tacos.')
