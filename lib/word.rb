@@ -23,6 +23,10 @@ class Word
     @@counter = 0
   end
 
+  define_singleton_method(:all) do
+    @@words
+  end
+
 
 
 
