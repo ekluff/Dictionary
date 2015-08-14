@@ -18,6 +18,10 @@ class Word
 
   # class methods
 
+  define_method(:clear) do
+    @@words = []
+    @@counter = 0
+  end
 
 
 
