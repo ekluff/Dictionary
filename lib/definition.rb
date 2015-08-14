@@ -17,6 +17,8 @@ class Definition
     @include_in_dictionary = true
     @@counter += 1
     @@definitions.push(self)
+    parent_word = Word.find_word(@word)
+    parent_word.add_definition(self) unless parent_word == nil
   end
 
   # class methods
