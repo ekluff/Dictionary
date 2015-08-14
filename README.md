@@ -10,7 +10,7 @@ This application allows a user to add new words, select their word type (e.g., n
 
 ## Setup
 
-The app is deployed to heroku at ..... To use the app, the user simply need click this link. Alternatively, the user can download the application code from github at ........., and run it locally by installing Sinatra on their machine and launching the app.rb file from their terminal.
+The app is deployed to heroku at https://git.heroku.com/ancient-garden-9750. To use the app, the user simply need click this link. Alternatively, the user can download the application code from github at http://github.com/ekluff/Dictionary.git and run it locally by installing Sinatra on their machine and launching the app.rb file from their terminal.
 
 ## Technologies Used
 
