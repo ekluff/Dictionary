@@ -18,10 +18,6 @@ class Word
     @@words.push(self)
   end
 
-  define_method(:set_include_in_dictionary) do |boolean|
-    Word.find_word(self).include_in_dictionary = boolean
-  end
-
   # class methods
 
   define_singleton_method(:clear) do
