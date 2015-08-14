@@ -28,6 +28,16 @@ class Word
     @@words
   end
 
+  define_singleton_method(:find_word) do |word_sought|
+    found_word = nil
+    @@words.each do |word_searched|
+      if word_searched.word == word_sought
+        found_word = word_searched
+      end
+    end
+    found_word
+  end
+
 
 
 
