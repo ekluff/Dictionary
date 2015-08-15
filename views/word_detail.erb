@@ -5,16 +5,18 @@ The Word Definer Machine (from the future) couldn't find your word. Could you tr
 
 <h3><%= @word %></h3>
 
-  <% @all_word_definitions.each() do |definition| %>
-    <h4><%= definition.type %></h4>
-    <%= definition.definition_text %>
-  <% end %>
+  <div class="definition-block">
+    <% @all_word_definitions.each() do |definition| %>
+      <h4><%= definition.type %></h4>
+      <%= definition.definition_text %>
+    <% end %>
+  </div>
 
-  <form id="add_definition" action="/add_definition/<%= @word %>" method="post">
+  <form id="add_definition" class="add_form" action="/add_definition/<%= @word %>" method="post">
 
    <h4>Add a definition for this word:</h4>
 
-  <select class="option" name="type">
+  <select class="word_detail_option" name="type">
     <option value="nil">Please select word type.</option>
     <option value="noun">Noun</option>
     <option value="verb">Verb</option>

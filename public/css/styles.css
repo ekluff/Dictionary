@@ -59,6 +59,11 @@ ul {
   margin-right: 10%;
 }
 
+.word_detail_option {
+  display: block;
+  margin: auto;
+}
+
 .area {
   width: 50%;
   margin: 20px;
@@ -67,4 +72,12 @@ ul {
 .word_button {
   display: block;
   margin: auto;
+}
+
+.definition-block {
+  padding: 20px;
+}
+
+.add_form {
+  margin-top: 50px;
 }
